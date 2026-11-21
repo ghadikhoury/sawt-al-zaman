@@ -1,0 +1,11 @@
+# Lyrics pipeline. Also needs ffmpeg on PATH and, for speed, an NVIDIA GPU with CUDA builds of torch/torchaudio.
+numpy
+scipy
+rapidfuzz
+requests
+torch
+torchaudio
+transformers
+demucs
+stable-ts
+faster-whisper

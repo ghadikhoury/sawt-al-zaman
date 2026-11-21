@@ -1,0 +1,13 @@
+.env
+.env.*
+__pycache__/
+*.pyc
+.venv/
+projects/
+lyrics_pipeline/catalog/
+lyrics_pipeline/eval/onscreen/
+*.mp4
+*.mov
+*.wav
+*.mp3
+*.m4a
