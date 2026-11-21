@@ -11,7 +11,7 @@ music. This repository has three parts:
 |---|---|
 | [`lyrics_pipeline/`](lyrics_pipeline) | Turns a clip of an old Arabic song into a timed lyrics file: every line and every word with its start and end time |
 | [`remotion-fx/`](remotion-fx) | Text and transition effects for [Remotion](https://www.remotion.dev) (video made with React): letters as a window onto the footage, a photo pop-up collage, a sliding push with motion blur |
-| [`skills/`](skills) | Five [Claude Code skills](https://docs.claude.com/en/docs/claude-code/skills) that hold the brand's design, typography, motion, sound and documentary rules, so an AI agent edits in one consistent style |
+| [`skills/`](skills) | Two [Claude Code skills](https://docs.claude.com/en/docs/claude-code/skills), for motion and editing and for documentaries, that hold the brand's rules so an AI agent edits in one consistent style |
 
 ## The result
 
@@ -41,8 +41,7 @@ they make:
   sung, so the captions have to follow what is actually heard.
 - **The recordings are old**: mono, hiss, a full orchestra, and often a live audience.
 - **Very little labelled data** exists for sung Arabic, so there is no off-the-shelf model to fine-tune from.
-- On screen, Arabic is **right-to-left with letters that join**, so splitting a word for animation can break it
-  (see `skills/sawt-text/arabic-script.md`).
+- On screen, Arabic is **right-to-left with letters that join**, so splitting a word for animation can break it.
 
 ## Tools: before and after
 
@@ -124,22 +123,17 @@ Each folder in `skills/` is a Claude Code skill: a `SKILL.md` with a description
 it, plus reference pages. They show one way to give an AI agent a creator's taste: every rule comes from a real
 verdict on a real video ("liked", "too fast", "banned"), and the owner's verdicts outrank generic advice.
 
-- `sawt-design`: palette, layout for 1080×1920, grading black-and-white archive footage, twenty principles to check
-  every frame against.
-- `sawt-text`: Arabic typography, pairing a bold and a thin font, how words arrive and leave, letters as a window.
 - `sawt-motion-edit`: easing and timing, transitions, pacing, music sync, the production checklist.
-- `sawt-sound-voice`: sound-design levels and timing, mixing to −14 LUFS, Arabic narration.
 - `sawt-documentary`: a one-minute artist documentary from research to delivery, with Arabic storytelling principles.
 
-To use them, copy a folder into your project's `.claude/skills/`. They mention files from the private production
-setup (footage, reference reels, font files) that aren't in this repository; adapt the paths and the taste to your
+To use them, copy a folder into your project's `.claude/skills/`. They mention files and three more skills (design,
+text, sound and voice) from the private production setup that aren't in this repository; adapt the paths and the taste to your
 own brand.
 
 ## Not included
 
 Songs, footage, archive photos, finished videos, other creators' reference reels, paid font files and the lyrics
-catalogue are not here. They aren't mine to share. Fonts the skills mention are listed with sources in
-`skills/sawt-text/fonts.md`.
+catalogue are not here. They aren't mine to share.
 
 ## Contributing and contact
 
